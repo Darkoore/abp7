@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Mis cuentas</h1>
+
+<a href="{% url 'cuenta_create' %}">Nueva cuenta</a>
+
+<ul>
+    {% for cuenta in cuentas %}
+        <li>
+            {{cuenta.numer_cuenta}} | {{cuenta.tipo_cuenta}} | saldo: {{cuenta.saldo}}
+            <a href="{% url 'cuenta_update' cuenta.pk %}">Editar</a>
+            <a href="{% url 'cuenta_delete' cuenta.pk %}">Eliminar</a>
+        </li>
+    {% empty %}
+    <li>No hay cuentas registradas.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

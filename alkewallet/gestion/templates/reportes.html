@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Reportes</h1>
+
+<p>Total saldo: {{total_saldo.total}}</p>
+
+<h2>Resumen ORM - Usuario {{user.username}}</h2>
+
+<ul>
+    {% for item in resumen_tipos %}
+        <li>{{item.tipo}}: {{item.cantidad}}</li>
+    {% endfor %}
+</ul>
+
+<h2>Resumen SQL - Total de transacciones </h2>
+
+<ul>
+    {% for fila in resumen_sql %}
+        <li>{{fila.0}}: {{fila.1}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

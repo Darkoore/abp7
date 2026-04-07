@@ -1,0 +1,55 @@
+/* ===== NAVBAR ===== */
+nav {
+    background-color: #1e1e2f;
+    padding: 12px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Links */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Contenedor derecho */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+/* Usuario */
+.nav-user {
+    color: #00bcd4;
+    margin-right: 10px;
+}
+
+/* Botón logout */
+nav form {
+    margin: 0;
+}
+
+nav button {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+nav button:hover {
+    background-color: #00bcd4;
+    border-color: #00bcd4;
+    color: #000;
+}

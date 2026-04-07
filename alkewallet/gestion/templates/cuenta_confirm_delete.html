@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Eliminar cuenta</h1>
+<p>Seguro que deseas eliminar la cuenta {{cuenta.numero_cuenta}} ?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Si, eliminar</button>
+</form>
+<a href="{% url 'cuenta_list' %}"><button>No</button></a>
+
+{% endblock %}
