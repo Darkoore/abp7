@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-n!eg369t9g&627e#f5m9!1(!1&9wcg%1#52anxaaz(!3b3=!2g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -83,13 +84,14 @@ if DEBUG:
 }
 else:
     DATABASES = {
+        # actualizado a postgres
         'default': {
-            'ENGINE': 'django.db.backends.mysql',
+            'ENGINE': 'django.db.backends.postgresql',
             'NAME': 'alkewallet_db',
-            'USER': 'root',
-            'PASSWORD': '1234',
+            'USER': 'postgres',
+            'PASSWORD': 'Darkoore1',
             'HOST': 'localhost',
-            'PORT': '3306',
+            'PORT': '5432',
         }
     }
 
@@ -131,6 +133,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Evitar redireccion a logout administrador
 LOGOUT_REDIRECT_URL = 'inicio'
 # evitar 404 al iniciar sesión
