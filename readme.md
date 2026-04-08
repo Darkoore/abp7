@@ -1,38 +1,17 @@
-# Comandos extras
+# ABP 7
+- Esto es un fork realizado de https://github.com/josehermosillaa/django_crud_alk
+  
+Cambios realizados:
+* Solucion de 404 al iniciar sesion
+* Programa ya no redirige a dashboard administrador al hacer logout
+* se aplica validacion de autenticacion en navbar para una mejor experiencia de usuario
+* Se implementa postgreSQL cuando sea un ambiente de produccion(debug= False)
+* Se añade algo de css para mejorar experiencia de usuario
 
-## comando para obtener un archivo de requerimientos (requirements.txt)
 
-con el entrono virtual activado podemos exportar todas las librerias instaladas en el con el comando
-
-``` pip freeze > requirements.txt ```
-
-esto crea un archivo requirements.txt en la raiz del proyecto similar a este
-
-```
-asgiref==3.11.1
-asttokens==3.0.1
-colorama==0.4.6
-decorator==5.2.1
-Django==6.0.3
-executing==2.2.1
-ipython==9.11.0
-ipython_pygments_lexers==1.1.1
-jedi==0.19.2
-matplotlib-inline==0.2.1
-mysqlclient==2.2.8
-parso==0.8.6
-prompt_toolkit==3.0.52
-pure_eval==0.2.3
-Pygments==2.19.2
-sqlparse==0.5.5
-stack-data==0.6.3
-traitlets==5.14.3
-tzdata==2025.3
-wcwidth==0.6.0
-
-```
-## instalar los paquetes a traves del archivo requirements.txt
-
-teniendo el archivo en la misma ruta que el entorno virtual nuevo, ejecutamos
-``` pip install -r requirements.txt```
-esto instalra todos los paquetes listados en el archivo, en las versiones que aparecen.
+## Como utilizar postgreSQL
+-Se debe instalar postgreSQL desde https://www.postgresql.org/download/
+-tras instalar postgreSQL se debe inicializar pgadmin4 utilizando la contraseña creada durante la instalacion luego click derecho en database -> create -> alkewalle_db
+-Realizar la instalacion en Visual Studio Code -> pip install psycopg2-binary
+-ejecutar el siguiente comando en la consola de visual -> python manage.py migrate
+-lanzar el programa django mediante -> python manage.py runserver
