@@ -10,8 +10,8 @@ Cambios realizados:
 
 
 ## Como utilizar postgreSQL
--Se debe instalar postgreSQL desde https://www.postgresql.org/download/
--tras instalar postgreSQL se debe inicializar pgadmin4 utilizando la contraseña creada durante la instalacion luego click derecho en database -> create -> alkewalle_db
--Realizar la instalacion en Visual Studio Code -> pip install psycopg2-binary
--ejecutar el siguiente comando en la consola de visual -> python manage.py migrate
--lanzar el programa django mediante -> python manage.py runserver
+* Se debe instalar postgreSQL desde https://www.postgresql.org/download/
+* tras instalar postgreSQL se debe inicializar pgadmin4 utilizando la contraseña creada durante la instalacion luego click derecho en database -> create -> alkewalle_db
+* Realizar la instalacion en Visual Studio Code -> pip install psycopg2-binary
+* ejecutar el siguiente comando en la consola de visual -> python manage.py migrate
+* lanzar el programa django mediante -> python manage.py runserver
